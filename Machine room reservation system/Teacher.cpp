@@ -10,6 +10,10 @@ Teacher::Teacher(int ID, string name, string password)
 	this->ID = ID;
 	this->name = name;
 	this->password = password;
+
+	//初始化容器
+	this->initialize_vector();
+
 }
 
 void Teacher::Interface()
@@ -50,7 +54,7 @@ void Teacher::CheckTheSub()
 			cout << ++refer << ".";
 			cout << "预约日期：周" << file.M_SO[i]["date"];
 			cout << "时段：" << (file.M_SO[i]["period"] == "1" ? "上午" : "下午");
-			cout << "机房：" << file.M_SO[i]["machine"];
+			cout << "班级：" << file.M_SO[i]["machine"];
 			string state = "状态";
 			//0—取消预约	1—审核中
 			//2—已预约		-1—预约失败
@@ -95,7 +99,6 @@ void Teacher::CheckTheSub()
 		}
 		cout << "输入无效，请重新输入！" << endl;
 	}
-	Sleep(5000);
 	system("pause");//任意键退出
 	system("cls");//清空界面
 }
@@ -119,7 +122,7 @@ void Teacher::CheckAllTSub()
 		cout << "时段：" << (file.M_SO[i]["period"] == "1" ? "上午" : "下午");
 		cout << "学号：" << (file.M_SO[i]["ID"]);
 		cout << "姓名：" << (file.M_SO[i]["name"]);
-		cout << "机房：" << file.M_SO[i]["machine"];
+		cout << "班级：" << file.M_SO[i]["machine"];
 		string state = "状态";
 		//0—取消预约	1—审核中
 		//2—已预约		-1—预约失败
@@ -145,5 +148,31 @@ void Teacher::CheckAllTSub()
 	Sleep(5000);
 	system("pause");//任意键退出
 	system("cls");//清空界面
+
+}
+
+
+//容器初始化
+void Teacher::initialize_vector()
+{
+
+	//读取班级文件中的信息
+	ifstream file_M;
+	file_M.open(Machine_File, ios::in);
+	if (!file_M.is_open())
+	{
+		cout << "文件读取失败" << endl;
+		Sleep(1000);
+		return;
+	}
+	//清空容器
+	v_M.clear();
+	//班级初始化
+	Machine m;
+	while (file_M >> m.Machine_ID && file_M >> m.Machine_volume)
+	{
+		v_M.push_back(m);
+	}
+	file_M.close();
 
 }

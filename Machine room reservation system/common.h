@@ -23,7 +23,7 @@ using namespace std;
 //老师文件
 #define Teacher_File "Teacher.txt"
 
-//机房信息文件
+//班级信息文件
 #define Machine_File "Machine.txt"
 
 //订单文件

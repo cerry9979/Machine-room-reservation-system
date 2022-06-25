@@ -12,12 +12,16 @@ public:
     Student(int ID, string name, string password);
 
     int ID = 0;                 //学生学号
-    vector<Machine> v_M;        //机房容器
+    vector<Machine> v_M;        //班级容器
+    map<string, string> m;
 
     virtual void Interface();   //子菜单界面
 
     //机房信息获取
-    void initialize_machine();
+    //void initialize_machine();
+
+    //容器初始化
+    void initialize_vector();
 
 
     void ApplySub();        //申请预约

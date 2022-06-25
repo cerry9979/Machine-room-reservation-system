@@ -16,7 +16,7 @@ void SubOrder::updateSubOrder()
 		file << "时间段:" << this->M_SO[i]["period"] << " ";
 		file << "学生学号:" << this->M_SO[i]["ID"] << " ";
 		file << "学生姓名:" << this->M_SO[i]["name"] << " ";
-		file << "选择机房:" << this->M_SO[i]["machine"] << " ";
+		file << "选择班级:" << this->M_SO[i]["machine"] << " ";
 		file << "审核状态:" << this->M_SO[i]["state"] << " ";
 		file.close();
 	}

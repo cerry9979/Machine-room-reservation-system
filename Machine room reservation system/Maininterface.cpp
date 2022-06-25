@@ -221,7 +221,7 @@ void Maininterface::AdminWindows(Basic*& admin)
 		}
 		else if (symbol == 3)//查看机房信息
 		{
-			cout << "查看机房信息：" << endl;
+			cout << "查看班级信息：" << endl;
 			person_admin->CheckMachine();
 		}
 		else if (symbol == 4)//清空预约记录

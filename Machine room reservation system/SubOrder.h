@@ -12,7 +12,7 @@ public:
 
 		//		时间 时间段	 学号  姓名	 机房编号 审核状态
 		string date, period, S_ID, S_name, M_num, state;
-		
+
 		//预约记录条数
 		this->resernum = 0;
 
@@ -20,6 +20,15 @@ public:
 			file >> S_ID && file >> S_name &&
 			file >> M_num && file >> state)
 		{
+			//测试代码
+			/*
+			cout << date << endl;
+			cout << period << endl;
+			cout << S_ID << endl;
+			cout << S_name << endl;
+			cout << M_num << endl;
+			cout << state << endl;
+			*/
 			string key, value;
 			int pos = 0;
 			map<string, string> m;
@@ -29,7 +38,7 @@ public:
 			if (pos != -1)
 			{
 				key = date.substr(0, pos);
-				value = date.substr(pos + 1, date.size() - pos);
+				value = date.substr(pos + 1, date.size() - pos - 1);
 				m.insert(make_pair(key, value));
 			}
 
@@ -38,7 +47,7 @@ public:
 			if (pos != -1)
 			{
 				key = period.substr(0, pos);
-				value = period.substr(pos + 1, period.size() - pos);
+				value = period.substr(pos + 1, period.size() - pos - 1);
 				m.insert(make_pair(key, value));
 			}
 
@@ -47,7 +56,7 @@ public:
 			if (pos != -1)
 			{
 				key = S_ID.substr(0, pos);
-				value = S_ID.substr(pos + 1, S_ID.size() - pos);
+				value = S_ID.substr(pos + 1, S_ID.size() - pos - 1);
 				m.insert(make_pair(key, value));
 			}
 
@@ -56,16 +65,16 @@ public:
 			if (pos != -1)
 			{
 				key = S_name.substr(0, pos);
-				value = S_name.substr(pos + 1, S_name.size() - pos);
+				value = S_name.substr(pos + 1, S_name.size() - pos - 1);
 				m.insert(make_pair(key, value));
 			}
 
-			//机房编号
+			//班级编号
 			pos = M_num.find(":");
 			if (pos != -1)
 			{
 				key = M_num.substr(0, pos);
-				value = M_num.substr(pos + 1, M_num.size() - pos);
+				value = M_num.substr(pos + 1, M_num.size() - pos - 1);
 				m.insert(make_pair(key, value));
 			}
 
@@ -74,7 +83,7 @@ public:
 			if (pos != -1)
 			{
 				key = state.substr(0, pos);
-				value = state.substr(pos + 1, state.size() - pos);
+				value = state.substr(pos + 1, state.size() - pos - 1);
 				m.insert(make_pair(key, value));
 			}
 
@@ -83,10 +92,7 @@ public:
 			this->resernum++;
 		}
 		file.close();
-
-
 	}
-	~SubOrder() {};
 
 	//更新预约记录	//更新审核状态
 	void updateSubOrder();
@@ -100,4 +106,3 @@ public:
 	//预约记录条数
 	int resernum;
 };
-

@@ -11,6 +11,11 @@ public:
     Teacher(int ID, string name, string password);
 
     virtual void Interface();   //子菜单界面
+    vector<Machine> v_M;        //班级容器
+    map<string, string> m;
+
+    //容器初始化
+    void initialize_vector();
 
     int ID = 0;                 //教师编号
 

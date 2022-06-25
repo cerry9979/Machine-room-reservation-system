@@ -11,6 +11,10 @@ Student::Student(int ID, string name, string password)
 	this->ID = ID;
 	this->name = name;
 	this->password = password;
+
+	//初始化容器
+	this->initialize_vector();
+
 }
 
 void Student::Interface()
@@ -36,7 +40,7 @@ void Student::Interface()
 //申请预约
 void Student::ApplySub()
 {
-	cout << "机房开放时间为周一至周五！：" << endl;
+	cout << "课程开放时间为周一至周五！：" << endl;
 	cout << "请输入您想预约的时间：" << endl;
 	cout << "1、周一：" << endl;
 	cout << "2、周二：" << endl;
@@ -67,9 +71,11 @@ void Student::ApplySub()
 		cout << "输入无效，请重新输入！" << endl;
 	}
 
-	cout << "请输入您想预约的机房：" << endl;
-	cout << "1、机房1" << v_M[0].Machine_ID << "\t机房容量：" << v_M[0].Machine_volume << endl;
-	cout << "2、机房2" << v_M[1].Machine_ID << "\t机房容量：" << v_M[1].Machine_volume << endl;
+	cout << "请输入您想预约的课程班：" << endl;
+	//cout << "1、班级1" << v_M[0].Machine_ID << "\t机房容量：" << v_M[0].Machine_volume << endl;
+	//cout << "2、班级2" << v_M[1].Machine_ID << "\t机房容量：" << v_M[1].Machine_volume << endl;
+	cout << "1号班级容量：" << v_M[0].Machine_volume << endl;
+	cout << "2号班级容量：" << v_M[1].Machine_volume << endl;
 
 	while (1)
 	{
@@ -84,20 +90,19 @@ void Student::ApplySub()
 	cout << "预约成功！预约信息处理中..." << endl;
 	cout << "请等待教师审核！" << endl;
 
-	Sleep(5000);
-	system("pause");//任意键退出
-	system("cls");//清空界面
-
 	//存入预约
 	ofstream file(SubOrder_File, ios::app);
 	file << "时间:" << date << " ";
 	file << "时间段:" << period << " ";
-	file << "学生学号:" << ID << " ";
+	file << "学生学号:" << this->ID << " ";
 	file << "学生姓名:" << this->name << " ";//区分姓名；
-	file << "选择机房:" << machine << " ";
-	file << "审核状态:" << 1 << endl << " ";//预约状态！！
+	file << "选择班级:" << machine << " ";
+	file << "审核状态:" << 1 << endl << " " << endl;//预约状态！！
 	file.close();
 
+	Sleep(5000);
+	system("pause");//任意键退出
+	system("cls");//清空界面
 }
 //查看预约
 void Student::CheckSub()
@@ -118,7 +123,7 @@ void Student::CheckSub()
 		{
 			cout << "预约日期：周" << file.M_SO[i]["date"];
 			cout << "时段：" << (file.M_SO[i]["period"] == "1"?"上午":"下午");
-			cout << "机房：" << file.M_SO[i]["machine"];
+			cout << "班级：" << file.M_SO[i]["machine"];
 			string state = "状态";
 			//0—取消预约	1—审核中
 			//2—已预约		-1—预约失败
@@ -165,7 +170,7 @@ void Student::CheckAllSSub()
 		cout << "时段：" << (file.M_SO[i]["period"] == "1" ? "上午" : "下午");
 		cout << "学号：" << (file.M_SO[i]["ID"]);
 		cout << "姓名：" << (file.M_SO[i]["name"]);
-		cout << "机房：" << file.M_SO[i]["machine"];
+		cout << "班级：" << file.M_SO[i]["machine"];
 		string state = "状态";
 		//0—取消预约	1—审核中
 		//2—已预约		-1—预约失败
@@ -204,8 +209,7 @@ void Student::CancelSub()
 		system("cls");//清空界面
 		return;
 	}
-	cout << "注：只有预约成功或审核中的预约记录可以取消" << endl;
-	cout << "请输入您想要取消的预约记录" << endl;
+	cout << "注：只有预约成功或审核中的预约记录可以取消" << endl << endl;
 	vector<int> v;
 	int refer = 0;//编号
 	for (int i = 0; i < file.resernum; i++)
@@ -219,8 +223,8 @@ void Student::CancelSub()
 				cout << refer++ << ".";
 				cout << "预约日期：周" << file.M_SO[i]["date"];
 				cout << "时段：" << (file.M_SO[i]["period"] == "1" ? "上午" : "下午");
-				cout << "机房：" << file.M_SO[i]["machine"];
-				string state = "状态";
+				cout << "班级：" << file.M_SO[i]["machine"];
+				string state = "状态：";
 				//0—取消预约	1—审核中
 				//2—已预约		-1—预约失败
 				if (file.M_SO[i]["state"] == "1")
@@ -258,15 +262,39 @@ void Student::CancelSub()
 		}
 		cout << "输入无效，请重新输入！" << endl;
 	}
-	Sleep(5000); 
 	system("pause");//任意键退出
 	system("cls");//清空界面
 }
 
-//机房信息获取
-void Student::initialize_machine()
+//班级信息获取
+//void Student::initialize_machine()
+//{
+//	//读取班级文件中的信息
+//	ifstream file_M;
+//	file_M.open(Machine_File, ios::in);
+//	//if (!file_M.is_open())
+//	//{
+//	//	cout << "文件读取失败" << endl;
+//	//	Sleep(1000);
+//	//	return;
+//	//}
+//	////清空容器
+//	//v_M.clear();
+//	////班级初始化
+//	Machine m;
+//	while (file_M >> m.Machine_ID && file_M >> m.Machine_volume)
+//	{
+//		v_M.push_back(m);
+//	}
+//	//cout << "\t当前班级数量为：" << v_M.size() << endl << endl;
+//	file_M.close();
+//}
+
+//容器初始化
+void Student::initialize_vector()
 {
-	//读取机房文件中的信息
+
+	//读取班级文件中的信息
 	ifstream file_M;
 	file_M.open(Machine_File, ios::in);
 	if (!file_M.is_open())
@@ -277,12 +305,12 @@ void Student::initialize_machine()
 	}
 	//清空容器
 	v_M.clear();
-	//机房初始化
+	//班级初始化
 	Machine m;
 	while (file_M >> m.Machine_ID && file_M >> m.Machine_volume)
 	{
 		v_M.push_back(m);
 	}
-	cout << "\t当前机房数量为：" << v_M.size() << endl << endl;
 	file_M.close();
+
 }

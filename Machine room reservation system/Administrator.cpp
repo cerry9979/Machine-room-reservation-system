@@ -13,7 +13,7 @@ Administrator::Administrator(string name, string password)
 	//初始化容器
 	this->initialize_vector();
 
-	//获取机房信息
+	//获取班级信息
 	void initialize_machine();
 }
 
@@ -27,7 +27,7 @@ void Administrator::Interface()
 	cout << "\t\t|                                                |" << endl;
 	cout << "\t\t|                   2：查看账号                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
-	cout << "\t\t|                   3：查看机房                  |" << endl;
+	cout << "\t\t|                   3：查看班级                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
 	cout << "\t\t|                   4：清空预约                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
@@ -117,6 +117,11 @@ void Administrator::AddAccount()
 	//调用初始化 避免重复输入
 	//重新读取数据
 	this->initialize_vector();
+
+	Sleep(5000);
+	system("pause");//任意键退出
+	system("cls");//清空界面
+
 }
 
 //查看账号
@@ -175,11 +180,11 @@ void Administrator::CheckAccount()
 //查看机房信息
 void Administrator::CheckMachine()
 {
-	cout << "所有的机房信息如下：" << endl;
+	cout << "所有的班级信息如下：" << endl;
 	//迭代器  容器内遍历
 	for (vector<Machine>::iterator it = v_M.begin(); it != v_M.end(); it++)
 	{
-		cout << "机房编号：" << it->Machine_ID << "\t机房容量：" << it->Machine_volume << endl;
+		cout << "班级编号：" << it->Machine_ID << "\t班级容量：" << it->Machine_volume << endl;
 	}
 	Sleep(5000);
 	system("pause");//任意键退出
@@ -242,11 +247,7 @@ void Administrator::initialize_vector()
 	}
 	cout << "\t当前老师数量为：" << v_T.size() << endl;
 	file_T.close();
-}
 
-//机房信息获取
-void Administrator::initialize_machine()
-{
 	//读取机房文件中的信息
 	ifstream file_M;
 	file_M.open(Machine_File, ios::in);
@@ -266,7 +267,32 @@ void Administrator::initialize_machine()
 	}
 	cout << "\t当前机房数量为：" << v_M.size() << endl << endl;
 	file_M.close();
+
 }
+
+//班级信息获取
+//void Administrator::initialize_machine()
+//{
+//	//读取班级文件中的信息
+//	ifstream file_M;
+//	file_M.open(Machine_File, ios::in);
+//	if (!file_M.is_open())
+//	{
+//		cout << "文件读取失败" << endl;
+//		Sleep(1000);
+//		return;
+//	}
+//	//清空容器
+//	v_M.clear();
+//	//班级初始化
+//	Machine m;
+//	while (file_M >> m.Machine_ID && file_M >> m.Machine_volume)
+//	{
+//		v_M.push_back(m);
+//	}
+//	cout << "\t当前班级数量为：" << v_M.size() << endl << endl;
+//	file_M.close();
+//}
 
 //检测重复
 bool Administrator::CheckRepeat(int ID, int Type)
