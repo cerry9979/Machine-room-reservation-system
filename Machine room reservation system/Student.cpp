@@ -7,46 +7,46 @@ Student::Student()
 }
 Student::Student(int ID, string name, string password)
 {
-	//≥ı ºªØ”√ªß Ù–‘
+	//ÂàùÂßãÂåñÁî®Êà∑Â±ûÊÄß
 	this->ID = ID;
 	this->name = name;
 	this->password = password;
 
-	//≥ı ºªØ»›∆˜
+	//ÂàùÂßãÂåñÂÆπÂô®
 	this->initialize_vector();
 
 }
 
 void Student::Interface()
 {
-	cout << "ª∂”≠—ß‘±£∫\t" << this->name << "\tµ«¬º£°" << endl;
+	cout << "Ê¨¢ËøéÂ≠¶ÂëòÔºö\t" << this->name << "\tÁôªÂΩïÔºÅ" << endl;
 	cout << "\t\t__________________________________________________" << endl;
 	cout << "\t\t|                                                |" << endl;
 	cout << "\t\t|                                                |" << endl;
-	cout << "\t\t|                   1£∫…Í«Î‘§‘º                  |" << endl;
+	cout << "\t\t|                   1ÔºöÁî≥ËØ∑È¢ÑÁ∫¶                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
-	cout << "\t\t|                   2£∫≤Èø¥‘§‘º                  |" << endl;
+	cout << "\t\t|                   2ÔºöÊü•ÁúãÈ¢ÑÁ∫¶                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
-	cout << "\t\t|                   3£∫≤Èø¥À˘”–‘§‘º              |" << endl;
+	cout << "\t\t|                   3ÔºöÊü•ÁúãÊâÄÊúâÈ¢ÑÁ∫¶              |" << endl;
 	cout << "\t\t|                                                |" << endl;
-	cout << "\t\t|                   4£∫»°œ˚‘§‘º                  |" << endl;
+	cout << "\t\t|                   4ÔºöÂèñÊ∂àÈ¢ÑÁ∫¶                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
-	cout << "\t\t|                   0£∫◊¢œ˙µ«¬º                  |" << endl;
+	cout << "\t\t|                   0ÔºöÊ≥®ÈîÄÁôªÂΩï                  |" << endl;
 	cout << "\t\t|                                                |" << endl;
 	cout << "\t\t|________________________________________________|" << endl;
-	cout << endl << "«Î ‰»Îƒ˙À˘∆⁄Õ˚µƒ≤Ÿ◊˜£∫";
+	cout << endl << "ËØ∑ËæìÂÖ•ÊÇ®ÊâÄÊúüÊúõÁöÑÊìç‰ΩúÔºö";
 }
 
-//…Í«Î‘§‘º
+//Áî≥ËØ∑È¢ÑÁ∫¶
 void Student::ApplySub()
 {
-	cout << "øŒ≥Ãø™∑≈ ±º‰Œ™÷‹“ª÷¡÷‹ŒÂ£°£∫" << endl;
-	cout << "«Î ‰»Îƒ˙œÎ‘§‘ºµƒ ±º‰£∫" << endl;
-	cout << "1°¢÷‹“ª£∫" << endl;
-	cout << "2°¢÷‹∂˛£∫" << endl;
-	cout << "3°¢÷‹»˝£∫" << endl;
-	cout << "4°¢÷‹Àƒ£∫" << endl;
-	cout << "5°¢÷‹ŒÂ£∫" << endl;
+	cout << "ËØæÁ®ãÂºÄÊîæÊó∂Èó¥‰∏∫Âë®‰∏ÄËá≥Âë®‰∫îÔºÅÔºö" << endl;
+	cout << "ËØ∑ËæìÂÖ•ÊÇ®ÊÉ≥È¢ÑÁ∫¶ÁöÑÊó∂Èó¥Ôºö" << endl;
+	cout << "1„ÄÅÂë®‰∏ÄÔºö" << endl;
+	cout << "2„ÄÅÂë®‰∫åÔºö" << endl;
+	cout << "3„ÄÅÂë®‰∏âÔºö" << endl;
+	cout << "4„ÄÅÂë®ÂõõÔºö" << endl;
+	cout << "5„ÄÅÂë®‰∫îÔºö" << endl;
 	int date = 0, period = 0, machine = 0;
 	while (1)
 	{
@@ -55,11 +55,11 @@ void Student::ApplySub()
 		{
 			break;
 		}
-		cout << " ‰»ÎŒﬁ–ß£¨«Î÷ÿ–¬ ‰»Î£°" << endl;
+		cout << "ËæìÂÖ•Êó†ÊïàÔºåËØ∑ÈáçÊñ∞ËæìÂÖ•ÔºÅ" << endl;
 	}
-	cout << "«Î ‰»Îƒ˙œÎ‘§‘ºµƒ ±º‰∂Œ£∫" << endl;
-	cout << "1°¢…œŒÁ" << endl;
-	cout << "2°¢œ¬ŒÁ" << endl;
+	cout << "ËØ∑ËæìÂÖ•ÊÇ®ÊÉ≥È¢ÑÁ∫¶ÁöÑÊó∂Èó¥ÊÆµÔºö" << endl;
+	cout << "1„ÄÅ‰∏äÂçà" << endl;
+	cout << "2„ÄÅ‰∏ãÂçà" << endl;
 
 	while (1)
 	{
@@ -68,14 +68,14 @@ void Student::ApplySub()
 		{
 			break;
 		}
-		cout << " ‰»ÎŒﬁ–ß£¨«Î÷ÿ–¬ ‰»Î£°" << endl;
+		cout << "ËæìÂÖ•Êó†ÊïàÔºåËØ∑ÈáçÊñ∞ËæìÂÖ•ÔºÅ" << endl;
 	}
 
-	cout << "«Î ‰»Îƒ˙œÎ‘§‘ºµƒøŒ≥Ã∞‡£∫" << endl;
-	//cout << "1°¢∞‡º∂1" << v_M[0].Machine_ID << "\tª˙∑ø»›¡ø£∫" << v_M[0].Machine_volume << endl;
-	//cout << "2°¢∞‡º∂2" << v_M[1].Machine_ID << "\tª˙∑ø»›¡ø£∫" << v_M[1].Machine_volume << endl;
-	cout << "1∫≈∞‡º∂»›¡ø£∫" << v_M[0].Machine_volume << endl;
-	cout << "2∫≈∞‡º∂»›¡ø£∫" << v_M[1].Machine_volume << endl;
+	cout << "ËØ∑ËæìÂÖ•ÊÇ®ÊÉ≥È¢ÑÁ∫¶ÁöÑËØæÁ®ãÁè≠Ôºö" << endl;
+	//cout << "1„ÄÅÁè≠Á∫ß1" << v_M[0].Machine_ID << "\tÊú∫ÊàøÂÆπÈáèÔºö" << v_M[0].Machine_volume << endl;
+	//cout << "2„ÄÅÁè≠Á∫ß2" << v_M[1].Machine_ID << "\tÊú∫ÊàøÂÆπÈáèÔºö" << v_M[1].Machine_volume << endl;
+	cout << "1Âè∑Áè≠Á∫ßÂÆπÈáèÔºö" << v_M[0].Machine_volume << endl;
+	cout << "2Âè∑Áè≠Á∫ßÂÆπÈáèÔºö" << v_M[1].Machine_volume << endl;
 
 	while (1)
 	{
@@ -84,163 +84,163 @@ void Student::ApplySub()
 		{
 			break;
 		}
-		cout << " ‰»ÎŒﬁ–ß£¨«Î÷ÿ–¬ ‰»Î£°" << endl;
+		cout << "ËæìÂÖ•Êó†ÊïàÔºåËØ∑ÈáçÊñ∞ËæìÂÖ•ÔºÅ" << endl;
 	}
 
-	cout << "‘§‘º≥…π¶£°‘§‘º–≈œ¢¥¶¿Ì÷–..." << endl;
-	cout << "«Îµ»¥˝ΩÃ ¶…Û∫À£°" << endl;
+	cout << "È¢ÑÁ∫¶ÊàêÂäüÔºÅÈ¢ÑÁ∫¶‰ø°ÊÅØÂ§ÑÁêÜ‰∏≠..." << endl;
+	cout << "ËØ∑Á≠âÂæÖÊïôÂ∏àÂÆ°Ê†∏ÔºÅ" << endl;
 
-	//¥Ê»Î‘§‘º
+	//Â≠òÂÖ•È¢ÑÁ∫¶
 	ofstream file(SubOrder_File, ios::app);
-	file << " ±º‰:" << date << " ";
-	file << " ±º‰∂Œ:" << period << " ";
-	file << "—ß…˙—ß∫≈:" << this->ID << " ";
-	file << "—ß…˙–’√˚:" << this->name << " ";//«¯∑÷–’√˚£ª
-	file << "—°‘Ò∞‡º∂:" << machine << " ";
-	file << "…Û∫À◊¥Ã¨:" << 1 << endl << " " << endl;//‘§‘º◊¥Ã¨£°£°
+	file << "Êó∂Èó¥:" << date << " ";
+	file << "Êó∂Èó¥ÊÆµ:" << period << " ";
+	file << "Â≠¶ÁîüÂ≠¶Âè∑:" << this->ID << " ";
+	file << "Â≠¶ÁîüÂßìÂêç:" << this->name << " ";//Âå∫ÂàÜÂßìÂêçÔºõ
+	file << "ÈÄâÊã©Áè≠Á∫ß:" << machine << " ";
+	file << "ÂÆ°Ê†∏Áä∂ÊÄÅ:" << 1 << endl << " " << endl;//È¢ÑÁ∫¶Áä∂ÊÄÅÔºÅÔºÅ
 	file.close();
 
 	Sleep(5000);
-	system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-	system("cls");//«Âø’ΩÁ√Ê
+	system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+	system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 }
-//≤Èø¥‘§‘º
+//Êü•ÁúãÈ¢ÑÁ∫¶
 void Student::CheckSub()
 {
 	SubOrder file;
 	if (file.resernum == 0)
 	{
-		cout << "Œﬁ‘§‘ºº«¬º" << endl;
+		cout << "Êó†È¢ÑÁ∫¶ËÆ∞ÂΩï" << endl;
 		Sleep(5000);
-		system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-		system("cls");//«Âø’ΩÁ√Ê
+		system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+		system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 		return;
 	}
-	cout << "ƒ˙µƒ‘§‘º–≈œ¢»Áœ¬£∫" << endl;
+	cout << "ÊÇ®ÁöÑÈ¢ÑÁ∫¶‰ø°ÊÅØÂ¶Ç‰∏ãÔºö" << endl;
 	for (int i = 0; i < file.resernum; i++)
 	{
 		if (atoi(file.M_SO[i]["ID"].c_str()) == this->ID)
 		{
-			cout << "‘§‘º»’∆⁄£∫÷‹" << file.M_SO[i]["date"];
-			cout << " ±∂Œ£∫" << (file.M_SO[i]["period"] == "1"?"…œŒÁ":"œ¬ŒÁ");
-			cout << "∞‡º∂£∫" << file.M_SO[i]["machine"];
-			string state = "◊¥Ã¨";
-			//0°™»°œ˚‘§‘º	1°™…Û∫À÷–
-			//2°™“—‘§‘º		-1°™‘§‘º ß∞‹
+			cout << "È¢ÑÁ∫¶Êó•ÊúüÔºöÂë®" << file.M_SO[i]["date"];
+			cout << "Êó∂ÊÆµÔºö" << (file.M_SO[i]["period"] == "1"?"‰∏äÂçà":"‰∏ãÂçà");
+			cout << "Áè≠Á∫ßÔºö" << file.M_SO[i]["machine"];
+			string state = "Áä∂ÊÄÅ";
+			//0‚ÄîÂèñÊ∂àÈ¢ÑÁ∫¶	1‚ÄîÂÆ°Ê†∏‰∏≠
+			//2‚ÄîÂ∑≤È¢ÑÁ∫¶		-1‚ÄîÈ¢ÑÁ∫¶Â§±Ë¥•
 			if (file.M_SO[i]["state"] == "1")
 			{
-				state += "…Û∫À÷–";
+				state += "ÂÆ°Ê†∏‰∏≠";
 			}
 			else if (file.M_SO[i]["state"] == "2")
 			{
-				state += "‘§‘º≥…π¶";
+				state += "È¢ÑÁ∫¶ÊàêÂäü";
 			}
 			else if (file.M_SO[i]["state"] == "-1")
 			{
-				state += "Œ¥Õ®π˝…Û∫À£¨‘§‘º ß∞‹";
+				state += "Êú™ÈÄöËøáÂÆ°Ê†∏ÔºåÈ¢ÑÁ∫¶Â§±Ë¥•";
 			}
 			else
 			{
-				state += "“—»°œ˚‘§‘º";
+				state += "Â∑≤ÂèñÊ∂àÈ¢ÑÁ∫¶";
 			}
 			cout << state << endl;
 		}
 	}
 	Sleep(5000);
-	system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-	system("cls");//«Âø’ΩÁ√Ê
+	system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+	system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 }
-//≤Èø¥À˘”–‘§‘º
+//Êü•ÁúãÊâÄÊúâÈ¢ÑÁ∫¶
 void Student::CheckAllSSub()
 {
 	SubOrder file;
 	if (file.resernum == 0)
 	{
-		cout << "Œﬁ‘§‘ºº«¬º" << endl;
+		cout << "Êó†È¢ÑÁ∫¶ËÆ∞ÂΩï" << endl;
 		Sleep(5000);
-		system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-		system("cls");//«Âø’ΩÁ√Ê
+		system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+		system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 		return;
 	}
-	cout << "À˘”–µƒ‘§‘º–≈œ¢»Áœ¬£∫" << endl;
+	cout << "ÊâÄÊúâÁöÑÈ¢ÑÁ∫¶‰ø°ÊÅØÂ¶Ç‰∏ãÔºö" << endl;
 	for (int i = 0; i < file.resernum; i++)
 	{
-		cout << i + 1 << "°¢";
-		cout << "‘§‘º»’∆⁄£∫÷‹" << file.M_SO[i]["date"];
-		cout << " ±∂Œ£∫" << (file.M_SO[i]["period"] == "1" ? "…œŒÁ" : "œ¬ŒÁ");
-		cout << "—ß∫≈£∫" << (file.M_SO[i]["ID"]);
-		cout << "–’√˚£∫" << (file.M_SO[i]["name"]);
-		cout << "∞‡º∂£∫" << file.M_SO[i]["machine"];
-		string state = "◊¥Ã¨";
-		//0°™»°œ˚‘§‘º	1°™…Û∫À÷–
-		//2°™“—‘§‘º		-1°™‘§‘º ß∞‹
-		if (file.M_SO[i]["state"] == "1")
+		cout << i + 1 << "„ÄÅ";
+		cout << "È¢ÑÁ∫¶Êó•ÊúüÔºöÂë®" << file.M_SO[i]["Êó∂Èó¥"];
+		cout << "Êó∂ÊÆµÔºö" << (file.M_SO[i]["Êó∂Èó¥ÊÆµ"] == "1" ? "‰∏äÂçà" : "‰∏ãÂçà");
+		cout << "Â≠¶Âè∑Ôºö" << (file.M_SO[i]["Â≠¶ÁîüÂ≠¶Âè∑"]);
+		cout << "ÂßìÂêçÔºö" << (file.M_SO[i]["Â≠¶ÁîüÂßìÂêç"]);
+		cout << "Áè≠Á∫ßÔºö" << file.M_SO[i]["ÈÄâÊã©Áè≠Á∫ß"];
+		string state = "Áä∂ÊÄÅ";
+		//0‚ÄîÂèñÊ∂àÈ¢ÑÁ∫¶	1‚ÄîÂÆ°Ê†∏‰∏≠
+		//2‚ÄîÂ∑≤È¢ÑÁ∫¶		-1‚ÄîÈ¢ÑÁ∫¶Â§±Ë¥•
+		if (file.M_SO[i]["ÂÆ°Ê†∏Áä∂ÊÄÅ"] == "1")
 		{
-			state += "…Û∫À÷–";
+			state += "ÂÆ°Ê†∏‰∏≠";
 		}
-		else if (file.M_SO[i]["state"] == "2")
+		else if (file.M_SO[i]["ÂÆ°Ê†∏Áä∂ÊÄÅ"] == "2")
 		{
-			state += "‘§‘º≥…π¶";
+			state += "È¢ÑÁ∫¶ÊàêÂäü";
 		}
-		else if (file.M_SO[i]["state"] == "-1")
+		else if (file.M_SO[i]["ÂÆ°Ê†∏Áä∂ÊÄÅ"] == "-1")
 		{
-			state += "Œ¥Õ®π˝…Û∫À£¨‘§‘º ß∞‹";
+			state += "Êú™ÈÄöËøáÂÆ°Ê†∏ÔºåÈ¢ÑÁ∫¶Â§±Ë¥•";
 		}
 		else
 		{
-			state += "“—»°œ˚‘§‘º";
+			state += "Â∑≤ÂèñÊ∂àÈ¢ÑÁ∫¶";
 		}
 		cout << state << endl;
 			
 	}
 	Sleep(5000);
-	system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-	system("cls");//«Âø’ΩÁ√Ê
+	system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+	system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 }
-//»°œ˚‘§‘º
+//ÂèñÊ∂àÈ¢ÑÁ∫¶
 void Student::CancelSub()
 {
 	SubOrder file;
 	if (file.resernum == 0)
 	{
-		cout << "Œﬁ‘§‘ºº«¬º" << endl;
+		cout << "Êó†È¢ÑÁ∫¶ËÆ∞ÂΩï" << endl;
 		Sleep(5000);
-		system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-		system("cls");//«Âø’ΩÁ√Ê
+		system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+		system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 		return;
 	}
-	cout << "◊¢£∫÷ª”–‘§‘º≥…π¶ªÚ…Û∫À÷–µƒ‘§‘ºº«¬ºø…“‘»°œ˚" << endl << endl;
+	cout << "Ê≥®ÔºöÂè™ÊúâÈ¢ÑÁ∫¶ÊàêÂäüÊàñÂÆ°Ê†∏‰∏≠ÁöÑÈ¢ÑÁ∫¶ËÆ∞ÂΩïÂèØ‰ª•ÂèñÊ∂à" << endl << endl;
 	vector<int> v;
-	int refer = 0;//±‡∫≈
+	int refer = 0;//ÁºñÂè∑
 	for (int i = 0; i < file.resernum; i++)
 	{
-		//œ¬±Í–ß¬ π˝µÕ
+		//‰∏ãÊ†áÊïàÁéáËøá‰Ωé
 		if (atoi(file.M_SO[i]["ID"].c_str()) == this->ID)
 		{
 			if (file.M_SO[i]["state"] == "1" || file.M_SO[i]["state"] == "2")
 			{
 				v.push_back(i);
 				cout << refer++ << ".";
-				cout << "‘§‘º»’∆⁄£∫÷‹" << file.M_SO[i]["date"];
-				cout << " ±∂Œ£∫" << (file.M_SO[i]["period"] == "1" ? "…œŒÁ" : "œ¬ŒÁ");
-				cout << "∞‡º∂£∫" << file.M_SO[i]["machine"];
-				string state = "◊¥Ã¨£∫";
-				//0°™»°œ˚‘§‘º	1°™…Û∫À÷–
-				//2°™“—‘§‘º		-1°™‘§‘º ß∞‹
+				cout << "È¢ÑÁ∫¶Êó•ÊúüÔºöÂë®" << file.M_SO[i]["date"];
+				cout << "Êó∂ÊÆµÔºö" << (file.M_SO[i]["period"] == "1" ? "‰∏äÂçà" : "‰∏ãÂçà");
+				cout << "Áè≠Á∫ßÔºö" << file.M_SO[i]["machine"];
+				string state = "Áä∂ÊÄÅÔºö";
+				//0‚ÄîÂèñÊ∂àÈ¢ÑÁ∫¶	1‚ÄîÂÆ°Ê†∏‰∏≠
+				//2‚ÄîÂ∑≤È¢ÑÁ∫¶		-1‚ÄîÈ¢ÑÁ∫¶Â§±Ë¥•
 				if (file.M_SO[i]["state"] == "1")
 				{
-					state += "…Û∫À÷–";
+					state += "ÂÆ°Ê†∏‰∏≠";
 				}
 				else if (file.M_SO[i]["state"] == "2")
 				{
-					state += "‘§‘º≥…π¶";
+					state += "È¢ÑÁ∫¶ÊàêÂäü";
 				}
 				cout << state << endl;
 			}
 		}
 	}
-	cout << "«Î ‰»Îƒ˙œÎ»°œ˚µƒ‘§‘ºº«¬º" << endl;
-	cout << "»Áπ˚ƒ˙≤ªœÎ»°œ˚»Œ∫Œ‘§‘º«Î∞¥ 0 " << endl;
+	cout << "ËØ∑ËæìÂÖ•ÊÇ®ÊÉ≥ÂèñÊ∂àÁöÑÈ¢ÑÁ∫¶ËÆ∞ÂΩï" << endl;
+	cout << "Â¶ÇÊûúÊÇ®‰∏çÊÉ≥ÂèñÊ∂à‰ªª‰ΩïÈ¢ÑÁ∫¶ËØ∑Êåâ 0 " << endl;
 	int symbol = 0;
 	while (1)
 	{
@@ -253,59 +253,59 @@ void Student::CancelSub()
 			}
 			else
 			{
-				//cout<<"º«¬ºÀ˘‘⁄Œª÷√"<<v[symbol - 1]<<endl;
+				//cout<<"ËÆ∞ÂΩïÊâÄÂú®‰ΩçÁΩÆ"<<v[symbol - 1]<<endl;
 				file.M_SO[symbol - 1]["state"] = "0";
 				file.updateSubOrder();
-				cout << "»°œ˚‘§‘º≥…π¶" << endl;
+				cout << "ÂèñÊ∂àÈ¢ÑÁ∫¶ÊàêÂäü" << endl;
 				break;
 			}
 		}
-		cout << " ‰»ÎŒﬁ–ß£¨«Î÷ÿ–¬ ‰»Î£°" << endl;
+		cout << "ËæìÂÖ•Êó†ÊïàÔºåËØ∑ÈáçÊñ∞ËæìÂÖ•ÔºÅ" << endl;
 	}
-	system("pause");//»Œ“‚º¸ÕÀ≥ˆ
-	system("cls");//«Âø’ΩÁ√Ê
+	system("pause");//‰ªªÊÑèÈîÆÈÄÄÂá∫
+	system("cls");//Ê∏ÖÁ©∫ÁïåÈù¢
 }
 
-//∞‡º∂–≈œ¢ªÒ»°
+//Áè≠Á∫ß‰ø°ÊÅØËé∑Âèñ
 //void Student::initialize_machine()
 //{
-//	//∂¡»°∞‡º∂Œƒº˛÷–µƒ–≈œ¢
+//	//ËØªÂèñÁè≠Á∫ßÊñá‰ª∂‰∏≠ÁöÑ‰ø°ÊÅØ
 //	ifstream file_M;
 //	file_M.open(Machine_File, ios::in);
 //	//if (!file_M.is_open())
 //	//{
-//	//	cout << "Œƒº˛∂¡»° ß∞‹" << endl;
+//	//	cout << "Êñá‰ª∂ËØªÂèñÂ§±Ë¥•" << endl;
 //	//	Sleep(1000);
 //	//	return;
 //	//}
-//	////«Âø’»›∆˜
+//	////Ê∏ÖÁ©∫ÂÆπÂô®
 //	//v_M.clear();
-//	////∞‡º∂≥ı ºªØ
+//	////Áè≠Á∫ßÂàùÂßãÂåñ
 //	Machine m;
 //	while (file_M >> m.Machine_ID && file_M >> m.Machine_volume)
 //	{
 //		v_M.push_back(m);
 //	}
-//	//cout << "\tµ±«∞∞‡º∂ ˝¡øŒ™£∫" << v_M.size() << endl << endl;
+//	//cout << "\tÂΩìÂâçÁè≠Á∫ßÊï∞Èáè‰∏∫Ôºö" << v_M.size() << endl << endl;
 //	file_M.close();
 //}
 
-//»›∆˜≥ı ºªØ
+//ÂÆπÂô®ÂàùÂßãÂåñ
 void Student::initialize_vector()
 {
 
-	//∂¡»°∞‡º∂Œƒº˛÷–µƒ–≈œ¢
+	//ËØªÂèñÁè≠Á∫ßÊñá‰ª∂‰∏≠ÁöÑ‰ø°ÊÅØ
 	ifstream file_M;
 	file_M.open(Machine_File, ios::in);
 	if (!file_M.is_open())
 	{
-		cout << "Œƒº˛∂¡»° ß∞‹" << endl;
+		cout << "Êñá‰ª∂ËØªÂèñÂ§±Ë¥•" << endl;
 		Sleep(1000);
 		return;
 	}
-	//«Âø’»›∆˜
+	//Ê∏ÖÁ©∫ÂÆπÂô®
 	v_M.clear();
-	//∞‡º∂≥ı ºªØ
+	//Áè≠Á∫ßÂàùÂßãÂåñ
 	Machine m;
 	while (file_M >> m.Machine_ID && file_M >> m.Machine_volume)
 	{
